@@ -23,8 +23,5 @@ CREATE TABLE pr_historia_uzytkownikow (
     id_zmieniacz integer NOT NULL references pr_uzytkownicy,
     adr_ip varchar(15),
     id_zmieniany integer NOT NULL references pr_uzytkownicy,
-    akcja int(1),
-    tresc text NOT NULL,
-    wpis_id integer NOT NULL references wpisy
+    akcja char(1)
 );
-
