@@ -22,7 +22,7 @@ CREATE TABLE pr_uprawnienia_uzytkownika (
         id_zmieniacz integer NOT NULL references pr_uzytkownicy,
         adr_ip varchar(15),
         id_zmieniany integer NOT NULL references pr_uzytkownicy,
-        akcja int(1),
+        akcja CHAR(1),
         tresc text NOT NULL,
         wpis_id integer NOT NULL references wpisy
     );
