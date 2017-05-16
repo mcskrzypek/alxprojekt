@@ -1,3 +1,4 @@
+
 CREATE TABLE uzytkownicy (
     id_uzytkownik serial primary key,
     id_uprawnienia integer NOT NULL references uprawnienia_uzytkownika,
@@ -14,3 +15,16 @@ CREATE TABLE uprawnienia_uzytkownika (
     rola varchar(15) NOT NULL
 );
     
+
+    CREATE TABLE historia_uzytkownikow (
+        id_historia serial primary key,
+        data timestamp without time zone DEFAULT now() NOT NULL,
+        id_zmieniacz integer NOT NULL references uzytkownicy,
+        adr_ip varchar(15),
+        id_zmieniany integer NOT NULL references uzytkownicy,
+        akcja int(1),
+        tresc text NOT NULL,
+        wpis_id integer NOT NULL references wpisy
+    );
+
+
