@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /* $lead - treść z bazy $cut - liczba znaków po których
  * uciąć tekst.
  */
@@ -40,4 +40,22 @@ function pobierz_jeden($sql) {
 		return false;
 	}
 	
+}
+
+<?php
+
+function pobierz($sql) {
+	$zapytanie = pg_query($sql);
+	$wynik = pg_fetch_all($zapytanie);
+
+	return $wynik;
+}
+
+function pobierz_jeden($sql) {
+	$wynik = pobierz($sql);
+	if(count($wynik) > 0) {
+		return $wynik[0];
+	}	else {
+		return false;
+	}
 }
