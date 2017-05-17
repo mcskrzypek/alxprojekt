@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12">
-    <footer class="small">&copy; Głos pszczelarza <?php print date(Y); ?></footer>
+    <footer class="small">&copy; Głos pszczelarza <?php print date('Y'); ?></footer>
   </div>
 </div>
 
