@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include "config.php";
 include "funkcje/common.php";
 pg_connect("
